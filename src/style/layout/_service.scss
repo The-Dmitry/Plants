@@ -1,0 +1,179 @@
+.service {
+  background-color: $dark-background;
+  &__title {
+    padding: 40px 0 0 0;
+    grid-column: 2 / 3;
+    max-width: 300px;
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: $green;
+    
+    @media (max-width: 1070px) {
+      padding: 60px 0 0 0;
+      font-size: 3.5rem;
+      line-height: 4.6rem;
+    }
+    @media (max-width: 640px) {
+      padding: 32px 0 0 0;
+      max-width: 350px;
+      font-size: 2.5rem;
+      line-height: 3.3rem;
+    }
+    @media (max-width: 420px) {
+      max-width: 278px;
+    }
+  }
+  &-navigation {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(161px, 162px));
+    column-gap: 10px;
+    margin: 40px 0 0 0;
+    width: 100%;
+    max-width: 560px;
+    justify-content: space-between;
+    grid-auto-flow: row;
+    align-items: center;
+    @media (max-width: 640px) {
+      grid-template: 1fr / repeat(auto-fit, minmax(121px, 122px));
+      row-gap: 10px;
+      justify-content: start;
+      max-width: 100%;
+    }
+  }
+  @media (min-width: 1070px) {
+    @include two-column-grid($columns: 1fr minmax(auto, 447px) minmax(auto, 775px) 1fr);
+  }
+  @media (max-width: 640px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  // @media (max-width: 370px) {
+  //   padding-left: 25px;
+  //   padding-right: 25px;
+  // }
+}
+
+.service-navigation__button {
+  cursor: pointer;
+  width: 161px;
+  height: 50px;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+  color: $orange;
+  font-family: 'Inika';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  transition: all linear 0.3s;
+  &_active {
+    background: #E06733;
+    color: #FFFFFF;
+  }
+  @media (max-width: 640px) {
+    width: 121px;
+    height: 33px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.projects {
+  grid-column: 2 / 4;
+  display: grid;
+  padding: 80px 0 122px 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 116px;
+  row-gap: 55px;
+  @media (max-width: 1100px) {
+    row-gap: 38px;
+    column-gap: 106px;
+  }
+
+  @media (max-width: 1070px) {
+    padding: 41px 0 69px 0;
+    column-gap: 106px;
+    row-gap: 38px;
+  }
+  @media (max-width: 710px) {
+    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  }
+
+  @media (min-width: 370px) and (max-width: 640px) {
+    padding: 41px 25px 24px 25px;
+    row-gap: 34px;
+
+  }
+
+  &-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #E3E1D5;
+    text-align: center;
+    transition: filter linear 0.3s;
+  }
+
+  &-item__image {
+    padding-bottom: 106.5%;
+    @media (max-width: 950px) {
+      padding-bottom: 124.5%;
+    }
+    @media (max-width: 640px) {
+      padding-bottom: 125%;
+    }
+  }
+
+  &-item__title {
+    margin: 11px 0;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: $orange;
+  }
+  &-item__text {
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #717171;
+    @media (max-width: 950px) {
+      max-width: 205px;
+      margin: 0 auto 19px auto;
+    }
+  }
+
+  
+
+}
+
+.blured {
+  filter: blur(3px);
+}
+
+// .projects:nth-child(2n) > .projects-item__image {
+//   // background: url(/src/image/1.jpg) center / cover no-repeat;
+//   background-color: black;
+// }
+.projects-item:nth-child(1) .projects-item__image {
+  background: url(/src/image/1.jpg) center / cover no-repeat;
+}
+.projects-item:nth-child(2) .projects-item__image {
+  background: url(/src/image/2.jpg) center / cover no-repeat;
+}
+.projects-item:nth-child(3) .projects-item__image {
+  background: url(/src/image/3.jpg) center / cover no-repeat;
+}
+.projects-item:nth-child(4) .projects-item__image {
+  background: url(/src/image/4.jpg) center / cover no-repeat;
+}
+.projects-item:nth-child(5) .projects-item__image {
+  background: url(/src/image/5.jpg) center / cover no-repeat;
+}
+.projects-item:nth-child(6) .projects-item__image {
+  background: url(/src/image/6.jpg) center / cover no-repeat;
+}

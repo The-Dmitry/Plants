@@ -1,0 +1,76 @@
+.about {
+  display: grid;
+  // grid-template-rows: 1fr 1f;
+  grid-auto-flow: row;
+  
+  &__image {
+    // height: 500px;
+    // min-width: 500px;
+    padding: 0 0 65% 0;
+    order: 2;
+    grid-column: 3 / 4;
+    background: url(/src/image/about-houseplant.png) 100% 50%/76% auto no-repeat;
+    @media (max-width: 900px) {
+      background: url(/src/image/about-houseplant.png) 50% 43%/38% auto no-repeat;
+      grid-column: 2 / 3;
+      padding: 0 0 63.5% 0;
+    }
+    @media (max-width: 640px) {
+      background: url(/src/image/about-houseplant.png) 50% -5%/46% auto no-repeat;
+      padding: 0 0 54.5% 0;
+    }
+  }
+
+  &__content {
+    
+    order: 1;
+    grid-column: 2 / 3;
+  }
+
+  &__title {
+    margin: 162px 0 37px 0;
+    max-width: 470px;
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: #499A18;
+    @media (max-width: 900px) {
+      margin: 42px auto 50px auto;
+      max-width: 423px;
+      text-align: center;
+      font-size: 3.5rem;
+      line-height: 4.6rem;
+    }
+    @media (max-width: 640px) {
+      margin: 31px auto 13px auto;
+      font-size: 2.5rem;
+      line-height: 3.3rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 153px;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #636060;
+    @media (max-width: 900px) {
+      margin-bottom: 0;
+    }
+    @media (max-width: 640px) {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr repeat(2, minmax(auto, 611px)) 1fr;
+  }
+
+  @media (max-width: 680px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+}
